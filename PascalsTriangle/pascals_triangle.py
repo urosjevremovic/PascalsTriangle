@@ -17,8 +17,10 @@ def pascals_triangle(number_of_rows):
 
 def main():
 
-    for i in pascals_triangle(number_of_rows=sys.argv[1]):
-        print(i)
+    with open("Pascals Triangle.txt", 'w', encoding='utf-8') as f:
+        for i in pascals_triangle(number_of_rows=sys.argv[1]):
+            print(i)
+            f.write(f"{i}\n")
 
 
 if __name__ == '__main__':
